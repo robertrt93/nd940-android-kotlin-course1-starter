@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Logout</string>
+    <string name="user">User</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_now">Register now</string>
+    <string name="sign_in">Sign in</string>
+    <string name="text_1">Este mi amo, por mil señales,
+        he visto que es un loco de atar, y aun también yo no le quedo en zaga,
+        pues soy más mentecato que él, pues le sigo y le sirvo, si es verdadero el refrafán que dice:
+        ‘Dime con quién andas, decirte he quién eres’, y el otro de ‘No con quien naces, sino con quien paces
+    </string>
+    <string name="text_2">Entre los pecados mayores que los hombres cometen,
+        aunque algunos dicen que es la soberbia,yo digo que es el desagradecimiento
+    </string>
+    <string name="text_3">Quizá las dos mujeres por un instante se sintieron hermanas,estaban lejos de su isla querida y en un increíble país.
+        \nMi abuela enunció alguna pregunta;
+        \nla otra le respondió con dificultad, buscando las palabras y repitiéndolas,
+        como asombrada de un antiguo sabor. Haría quince años que no hablaba el idioma natal y no le era fácil recuperarlo.
+        \nDijo que era de Yorkshire, que sus padres emigraron a Buenos Aires, que los había perdido en un malón,
+        que la habían llevado los indios y que ahora era mujer de un capitanejo, a quien ya había dado dos hijos y
+        que era muy valiente.
+        \nEso lo fue diciendo en un inglés rústico, entreverado de araucano o de pampa,
+        y detrás del relato se vislumbraba una vida feral: los toldos de cuero de caballo, las hogueras de estiércol,
+        los festines de carne chamuscada o de vísceras crudas, las sigilosas marchas al alba; el asalto de los corrales,
+        el alarido y el saqueo, la guerra, el caudaloso arreo de las haciendas por jinetes desnudos, la poligamia,
+        la hediondez y la magia.
+        \nA esa barbarie se había rebajado una inglesa. Movida por la lástima y el escándalo,
+        mi abuela la exhortó a no volver.
+        \nJuró ampararla, juró rescatar a sus hijos. La otra le contestó que era feliz y volvió,
+        esa noche, al desierto.
+        \nFrancisco Borges moriría poco después en la revolución del 74; quizá mi abuela, entonces,
+        pudo percibir en la otra mujer, también arrebatada y transformada por este continente implacable,
+        un espejo monstruoso de su destino.
+    </string>
+    <string name="welcome">Welcome!!!</string>
+    <string name="continuar">Continue</string>
 </resources>
