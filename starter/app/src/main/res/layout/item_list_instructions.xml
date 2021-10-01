@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="instruction"
+            type="com.udacity.shoestore.models.Instruction" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            cardView:cardCornerRadius="15dp"
+            cardView:cardElevation="3dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imagenFamiliar"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="@string/phone_description"
+                    android:scaleType="centerCrop"
+                    cardView:layout_constraintBottom_toBottomOf="parent"
+                    cardView:layout_constraintStart_toStartOf="parent"
+                    cardView:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/ic_baseline_add_shopping_cart_24" />
+
+                <TextView
+                    android:id="@+id/nombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@{instruction.name}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    cardView:layout_constraintBottom_toBottomOf="parent"
+                    cardView:layout_constraintEnd_toEndOf="parent"
+                    cardView:layout_constraintStart_toEndOf="@+id/imagenFamiliar"
+                    cardView:layout_constraintVertical_bias="0.0"
+                    tools:text="@tools:sample/full_names[0]" />
+
+                <TextView
+                    android:id="@+id/txt_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="start"
+                    android:text="@{instruction.description}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/nombre"
+                    app:layout_constraintStart_toEndOf="@+id/imagenFamiliar"
+                    app:layout_constraintTop_toBottomOf="@+id/nombre"
+                    app:layout_constraintVertical_bias="0.1"
+                    tools:text="@tools:sample/first_names[99]" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

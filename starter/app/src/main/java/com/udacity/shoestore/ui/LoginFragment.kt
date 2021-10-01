@@ -10,7 +10,6 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
-import kotlinx.android.synthetic.main.fragment_login.*
 
 
 /**
@@ -30,9 +29,14 @@ class LoginFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
         //activity?.actionBar?.hide()
-        (activity as MainActivity?)!!.supportActionBar!!.hide()
+//        (activity as MainActivity?)!!.supportActionBar!!.hide()
         setListeners()
         return binding.root
+    }
+
+    override fun onStop() {
+        super.onStop()
+      //  (activity as MainActivity?)!!.supportActionBar!!.show()
     }
 
     private fun setListeners() {

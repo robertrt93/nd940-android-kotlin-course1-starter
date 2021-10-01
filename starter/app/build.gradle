@@ -1,9 +1,14 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
-apply plugin: 'androidx.navigation.safeargs'
-
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    // ayuda a visualizar los errores en tiempo de escribir codigo
+    id 'kotlin-kapt'
+    // Adding the apply plugin statement for safeargs
+    // id 'kotlin-android-extensions'
+    id 'kotlin-parcelize'
+    //Adding the apply plugin statement for safeargs. hay que aniadir  classpath "androidx.navigation en project gradle
+    id 'androidx.navigation.safeargs'
+}
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
@@ -49,6 +54,13 @@ dependencies {
     // navigation libraries
     implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
     implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle"
+    implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
+    // import androidx.lifecycle.asLiveData variable = liveData {}
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$version_lifecycle_asLiveData"
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
 
     testImplementation 'junit:junit:4.12'

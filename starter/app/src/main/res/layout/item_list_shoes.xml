@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            cardView:cardCornerRadius="15dp"
+            cardView:cardElevation="3dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageShoe"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="@string/phone_description"
+                    android:scaleType="centerCrop"
+                    cardView:layout_constraintBottom_toBottomOf="parent"
+                    cardView:layout_constraintStart_toStartOf="parent"
+                    cardView:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/ic_baseline_add_shopping_cart_24" />
+
+                <TextView
+                    android:id="@+id/nombre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/horizontal_margin_padding_4dp"
+                    android:padding="5dp"
+                    android:text="@{shoe.name}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    cardView:layout_constraintBottom_toBottomOf="parent"
+                    cardView:layout_constraintEnd_toEndOf="parent"
+                    cardView:layout_constraintStart_toEndOf="@+id/imageShoe"
+                    cardView:layout_constraintVertical_bias="0.0"
+                    tools:text="@tools:sample/full_names[0]" />
+
+                <TextView
+                    android:id="@+id/txt_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/horizontal_margin_padding_8dp"
+                    android:layout_marginStart="@dimen/horizontal_margin_padding_8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="start"
+                    android:text="@string/size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageShoe"
+                    app:layout_constraintTop_toBottomOf="@+id/nombre"
+                    app:layout_constraintVertical_bias="0.1" />
+
+                <TextView
+                    android:id="@+id/txt_size_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@{@string/size_edit(shoe.size)}"
+                    tools:text="43.0"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/txt_size"
+                    app:layout_constraintStart_toEndOf="@+id/txt_size" />
+
+                <TextView
+                    android:id="@+id/txt_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{shoe.company}"
+                    android:layout_marginEnd="@dimen/horizontal_margin_padding_8dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/txt_size_edit"
+                    app:layout_constraintEnd_toEndOf="@+id/nombre"
+                    tools:text="@tools:sample/first_names[91]" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/horizontal_margin_padding_8dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:gravity="start"
+                    android:text="@{shoe.description}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/nombre"
+                    app:layout_constraintStart_toStartOf="@+id/nombre"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_size"
+                    tools:text="@tools:sample/first_names[99]" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>
