@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
+import com.udacity.shoestore.R
 import com.udacity.shoestore.models.Instruction
 import com.udacity.shoestore.models.Shoe
 import java.util.*
@@ -43,7 +44,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
                                       ), Shoe(
                     "Nano X1",
                     41.1,
-                    "reebok",
+                    "Reebok",
                     "Trepa por la cuerda, salta y domina cada repetición con esta zapatilla hecha para entrenar como tú lo haces. Pensada para atletas de élite, la nueva Reebok Nano X1 es una zapatilla diseñada para todos aquellos a quienes les apasiona poner a prueba sus límites. Este modelo para hombre viene con una parte superior de punto Flexweave® transpirable y duradera, y cuenta con sujeción integrada para los movimientos multidireccionales. La amortiguación de espuma Floatride Energy en la puntera te proporciona sensibilidad y capacidad de respuesta. El clip en el talón añade estabilidad.",
                     listOf(
                             "https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/aba35c9a73504f8ea5f9ac940053f418_9366/Nano_X1_Negro_GX2801_01_standard.jpg",
@@ -62,23 +63,28 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             Instruction(
                     0,
                     "WHAT ARE SHOESTORE`S SHIPPING OPTIONS?",
-                    "During checkout, Members and guests can choose their preferred shipping option—we’ll provide an estimated delivery date for every item in your bag based on your shipping selection, the delivery address, and where the item(s) ship from."),
+                    "During checkout, Members and guests can choose their preferred shipping option—we’ll provide an estimated delivery date for every item in your bag based on your shipping selection, the delivery address, and where the item(s) ship from.",
+                    application.resources.getDrawable(R.drawable.ic_add_shopping_cart_24, null)),
             Instruction(
-                    1,
-                    "WHAT IS SHOESTORE`S RETURN POLICY??",
-                    "All shoeStore purchases have an extended 60-day return policy (some exceptions apply).\n\n" + "We design our shoes and gear to help you perform at peak level, so if they're not working exactly right for you, we've got you covered. Whether you shop on shoeStore.com, in any of the shoeStore apps, or at a shoeStore store, we give you 60 days to take your shoeStore and Converse purchases for a trial run, confidently knowing you can return items (some exceptions apply) for any reason within those 60 days. That includes custom shoeStore By You sneakers. Even after 60 days, you can still return items if they’re unworn and unwashed. And remember, returns are always free for shoeStore Members.\n" + "So go ahead, shop with confidence, and enjoy your 60-day trial"),
+            1,
+            "WHAT IS SHOESTORE`S RETURN POLICY??",
+            "All shoeStore purchases have an extended 60-day return policy (some exceptions apply).\n\n" + "We design our shoes and gear to help you perform at peak level, so if they're not working exactly right for you, we've got you covered. Whether you shop on shoeStore.com, in any of the shoeStore apps, or at a shoeStore store, we give you 60 days to take your shoeStore and Converse purchases for a trial run, confidently knowing you can return items (some exceptions apply) for any reason within those 60 days. That includes custom shoeStore By You sneakers. Even after 60 days, you can still return items if they’re unworn and unwashed. And remember, returns are always free for shoeStore Members.\n" + "So go ahead, shop with confidence, and enjoy your 60-day trial",
+            application.resources.getDrawable(R.drawable.ic_policy_24, null)),
             Instruction(
-                    2,
-                    "WHAT PAYMENT OPTIONS CAN I USE ON SHOESTORE ORDERS??",
-                    "During checkout, Members and guests can choose their preferred shipping option—we’ll provide an estimated delivery date for every item in your bag based on your shipping selection, the delivery address, and where the item(s) ship from."),
+            2,
+            "WHAT PAYMENT OPTIONS CAN I USE ON SHOESTORE ORDERS??",
+            "During checkout, Members and guests can choose their preferred shipping option—we’ll provide an estimated delivery date for every item in your bag based on your shipping selection, the delivery address, and where the item(s) ship from.",
+            application.resources.getDrawable(R.drawable.ic_orders_24, null)),
             Instruction(
-                    3,
-                    "WHAT ARE SHOESTORE`S SHIPPING OPTIONS?",
-                    "We want to make buying your favorite Nike shoes and gear fast and easy, and accept the following payment options:\n" + "\n" + "* Visa, MasterCard, American Express, Discover\n" + "* Apple Pay\n" + "* PayPal\n" + "* Klarna\n" + "Product Vouchers"),
+            3,
+            "WHAT ARE SHOESTORE`S SHIPPING OPTIONS?",
+            "We want to make buying your favorite Nike shoes and gear fast and easy, and accept the following payment options:\n" + "\n" + "* Visa, MasterCard, American Express, Discover\n" + "* Apple Pay\n" + "* PayPal\n" + "* Klarna\n" + "Product Vouchers",
+            application.resources.getDrawable(R.drawable.ic_credit_card_24, null)),
             Instruction(
-                    4,
-                    "CONTACT US",
-                    "---- 1-800-806-6453  ----\n" + "---- 4 am - 11 pm PT  ----\n" + "---- 7 days a week.    ----"))
+            4,
+            "CONTACT US",
+            "---- 1-800-000-0000  ----\n" + "---- 4 am - 11 pm PT  ----\n" + "---- 7 days a week.    ----",
+            application.resources.getDrawable(R.drawable.ic_contact_support_24, null)))
     val instructionList1: LiveData<List<Instruction>> = liveData {
         emit(listIsnt)
     }

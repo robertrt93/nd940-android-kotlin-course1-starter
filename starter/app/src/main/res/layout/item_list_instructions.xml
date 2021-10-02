@@ -36,7 +36,7 @@
                     cardView:layout_constraintBottom_toBottomOf="parent"
                     cardView:layout_constraintStart_toStartOf="parent"
                     cardView:layout_constraintTop_toTopOf="parent"
-                    android:background="@drawable/ic_baseline_add_shopping_cart_24" />
+                    android:src="@{instruction.drawable}"/>
 
                 <TextView
                     android:id="@+id/nombre"
